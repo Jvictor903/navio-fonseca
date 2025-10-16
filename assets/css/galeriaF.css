@@ -1,0 +1,177 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #e0e0e0;
+}
+
+/* ======== HEADER COM IMAGEM E OVERLAY ======== */
+.topo {
+    position: relative;
+    height: 250px;
+    background: url("/assets/images/goat.jpg") no-repeat center center/cover; /* imagem de fundo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* overlay escuro */
+.topo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* 50% de opacidade preta */
+    z-index: 1;
+}
+
+/* botão no canto esquerdo */
+.topo nav {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 2; /* acima do overlay */
+}
+
+.botao {
+    background: rgba(0, 68, 204, 0.9);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.botao:hover {
+    background: white;
+    color: #0044cc;
+    transform: scale(1.05);
+}
+
+/* título central sobre a imagem */
+.topo h1 {
+    margin: 0;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* ======== CONTEÚDO ======== */
+.container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+/* Galeria 3 colunas × 2 linhas */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.galeria div {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 11px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
+h3 {
+    margin-top: 10px;
+    color: #000;
+    font-size: 1em;
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #b30000;
+    color: white;
+    padding: 20px 0;
+    border-top: 5px solid #0044cc;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+}
+
+footer a {
+    margin: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 2px;
+}
+
+/* ====== HOVER NAS IMAGENS ====== */
+.galeria img {
+    width: 100%;
+    border-radius: 8px;
+    height: 500px; /* mesmo tamanho para todas */
+    object-fit: cover; /* mantém proporção da imagem dentro do card */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* ====== MODAL ====== */
+.modal {
+    display: none; /* oculto por padrão */
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+}

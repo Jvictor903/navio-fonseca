@@ -1,0 +1,128 @@
+/* ===== BODY COM IMAGEM DE FUNDO ===== */
+body {
+  font-family: Arial, sans-serif;
+  color: #c40000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  /* imagem de fundo para toda a página */
+  background: url("/assets/images/goat.jpg") no-repeat center center fixed;
+  background-size: cover; /* cobre toda a tela */
+  position: relative;
+  min-height: 100vh; /* altura mínima da página */
+}
+
+nav h1 {
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+
+/* overlay escuro sobre toda a página */
+body::before {
+  content: "";
+  position: fixed; /* fixo sobre toda a tela */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* opacidade do overlay */
+  z-index: 0;
+}
+
+/* conteúdo acima do overlay */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== HEADER ===== */
+.topo {
+  padding: 40px 20px;
+}
+
+/* título central sobre o fundo */
+.topo .titulo {
+  margin: 0;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* ===== CARDS ===== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+.card {
+  background-color: rgba(255,255,255,0.9); /* leve transparência para mostrar fundo atrás */
+  border: 2px solid #c40000;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(196, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  width: 450px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(196, 0, 0, 0.4);
+  border-color: #ff0000;
+}
+
+.card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-bottom: 3px solid #c40000;
+}
+
+.card h2 {
+  margin: 15px 0;
+  font-size: 1.4em;
+  color: #c40000;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* ===== GALERIA DE LINKS ===== */
+.galeria-links {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  gap: 20px;               /* espaço entre os cards */
+  flex-wrap: wrap;         /* empilha automaticamente em telas menores */
+  margin: 20px auto;       /* centraliza verticalmente */
+}
+
+.card-galeria {
+  background-color: rgba(255,255,255,0.9); /* transparente */
+  border: 2px solid #c40000;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(196, 0, 0, 0.2);
+  width: 400px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c40000;
+}
+
+.card-galeria:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(196, 0, 0, 0.4);
+}

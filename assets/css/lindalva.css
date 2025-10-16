@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* ===== CABEÇALHO ===== */
+.topo {
+    position: relative;
+    height: 300px;
+    background: url("/assets/images/tela\ fundo\ fonseca.jpeg") no-repeat center center/cover; /* 🔹 coloque aqui sua imagem */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* botão no canto esquerdo */
+.topo nav {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+/* título central */
+.topo h1 {
+    margin: 0;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* botão estilizado */
+.botao {
+    background: rgba(0, 68, 204, 0.9);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.botao:hover {
+    background: white;
+    color: #0044cc;
+    transform: scale(1.05);
+}
+
+/* Container principal dos cards */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 80px;
+    position: relative; /* importante para a imagem se posicionar dentro do container */
+}
+
+/* ===== CARD ===== */
+.card {
+    color: #000000;
+    background-color: #f1f1f1;
+    width: 500px;
+    height: 600px;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+                rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.card ul {
+    padding-left: 20px;
+    text-align: left;
+}
+
+.card li {
+    margin-bottom: 10px;
+}
+
+/* ===== CABEÇALHO ===== */
+.topo {
+    position: relative;
+    height: 300px;
+    background: url("/assets/images/tela\ de\ fundo\ lindalva.jpeg") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* overlay escuro */
+.topo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* 50% de opacidade preta */
+    z-index: 1;
+}
+
+/* botão no canto esquerdo */
+.topo nav {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 2; /* acima do overlay */
+}
+
+/* título central */
+.topo h1 {
+    margin: 0;
+    font-size: 2.2em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    z-index: 2; /* acima do overlay */
+}

@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;
+    gap: 20px; /* espaço entre os itens */
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.85); /* fundo branco transparente */
+    border-top: 1px solid rgba(255, 0, 0, 0.2); /* linha vermelha sutil */
+    font-size: 16px; /* pequeno e discreto */
+    color: #333; /* texto escuro */
+    font-family: 'Poppins', Arial, sans-serif;
+    margin-top: 50px; /* distância do conteúdo da página */
+}
+
+footer .footer-item a {
+    text-decoration: none;
+    color: rgba(255, 0, 0, 0.7); /* vermelho sutil */
+    transition: color 0.3s;
+}
+
+footer .footer-item a:hover {
+    color: #295bff; /* vermelho vivo ao passar o mouse */
+}
