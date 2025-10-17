@@ -126,3 +126,18 @@ body {
     text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
     z-index: 2; /* acima do overlay */
 }
+
+/* ===== AJUSTE DOS TÍTULOS DOS CARDS ===== */
+.card ul {
+    list-style: none; /* remove os pontos */
+    padding: 0;       /* remove recuo padrão */
+    margin: 0;
+    text-align: center; /* centraliza o texto */
+}
+
+.card li {
+    color: rgb(214, 6, 6); /* cor vermelha */
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
